@@ -4,18 +4,21 @@
 ## Goal
 Build a lightweight OS that can host servers (hopefully easily, probably not) 
 
-## Milestones
+## Aimed Features
 * Bootloader -
-* I/O management -
-    * Memory management -
-    * Disk management -
-    * Peripheral management -
 * Task management -
-    * Multiprocessing -
-    * Multithreading -
+* Task synchronization -
+* Memory management -
+* Storage management -
+* File systems -
+* I/O management -
 * Networking -
 * Security -
 
+## Milestones
+Taken from https://wiki.osdev.org/What_order_should_I_make_things_in
+* Printing strings and integers on screen
+* ...
 
 (probably these "-"s will remain there for a looooong time)
 
@@ -24,3 +27,4 @@ Here, I will gather a list of resources that may be useful during development.
 
 * wiki.osdev.org
 * Silberschatz - Operating System Concepts
+* Tanenbaum - Operating Systems Design and Implementation
