@@ -16,7 +16,7 @@ Build a lightweight OS that can host servers (hopefully easily, probably not)
 * Security -
 
 ## Milestones
-Taken from https://wiki.osdev.org/What_order_should_I_make_things_in
+Taken from [this OSDev wiki page](https://wiki.osdev.org/What_order_should_I_make_things_in).
 * Printing strings and integers on screen
 * ...
 
@@ -26,5 +26,6 @@ Taken from https://wiki.osdev.org/What_order_should_I_make_things_in
 Here, I will gather a list of resources that may be useful during development.
 
 * wiki.osdev.org
+    * The project is built upon the [Meaty Bones Tutorial](https://wiki.osdev.org/Meaty_Skeleton), so special thanks to Jonas Termansen!
 * Silberschatz - Operating System Concepts
 * Tanenbaum - Operating Systems Design and Implementation

@@ -1,7 +1,9 @@
 # Cross Compiler
+Currently, there's only one cross-compiler, which is for i686-elf architecture.
 
 ## Instructions
 The instructions below closely follow [this OSDev Wiki page](https://wiki.osdev.org/GCC_Cross-Compiler).
+Before starting, install all requirements listed [here](https://wiki.osdev.org/GCC_Cross-Compiler#Installing_Dependencies).
 
 1. Get Binutils 2.34 from [here](https://ftp.gnu.org/gnu/binutils/). Extract the source code folder in the tarball to `$HOME/src`.
 2. Get GCC 9.4 from [here](ftp.gnu.org/gnu/gcc/). Again, extract the source code folder in the tarball to `$HOME/src`.

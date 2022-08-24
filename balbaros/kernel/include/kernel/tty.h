@@ -1,5 +1,5 @@
-#ifndef _KERNEL_TTY_H
-#define _KERNEL_TTY_H
+#ifndef BALBAROS_KERNEL_INCLUDE_KERNEL_TTY
+#define BALBAROS_KERNEL_INCLUDE_KERNEL_TTY
 
 #include <stddef.h>
 

@@ -1,2 +1,8 @@
 .vscode/
-balbaros/build/
+# balbaros/build/
+*.d
+*.kernel
+*.o
+*.iso
+isodir
+sysroot
