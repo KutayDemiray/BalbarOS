@@ -1,6 +1,7 @@
-DEFAULT_HOST!=../default-host.sh
+SCRIPTS_DIR=../../scripts/kernel
+DEFAULT_HOST!=$(SCRIPTS_DIR)/default-host.sh
 HOST?=DEFAULT_HOST
-HOSTARCH!=../target-triplet-to-arch.sh $(HOST)
+HOSTARCH!=$(SCRIPTS_DIR)/target-triplet-to-arch.sh $(HOST)
 
 CFLAGS?=-O2 -g
 CPPFLAGS?=
@@ -29,6 +30,7 @@ LIBK_CPPFLAGS:=$(LIBK_CPPFLAGS) $(KERNEL_ARCH_CPPFLAGS)
 
 FREEOBJS=\
 $(ARCH_FREEOBJS) \
+ssp/stack_protection.o \
 stdio/printf.o \
 stdio/putchar.o \
 stdio/puts.o \

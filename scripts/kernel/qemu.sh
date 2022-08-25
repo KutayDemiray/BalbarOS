@@ -2,4 +2,5 @@
 set -e
 . ./iso.sh
 
-qemu-system-$(./target-triplet-to-arch.sh $HOST) -cdrom balbaros.iso
+cd $PROJECTROOT
+qemu-system-$($SCRIPTROOT/target-triplet-to-arch.sh $HOST) -cdrom balbaros.iso

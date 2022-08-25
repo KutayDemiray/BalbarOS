@@ -2,6 +2,8 @@
 set -e
 . ./build.sh
 
+cd $PROJECTROOT
+
 mkdir -p isodir
 mkdir -p isodir/boot
 mkdir -p isodir/boot/grub
@@ -13,3 +15,5 @@ menuentry "BalbarOS" {
 }
 EOF
 grub-mkrescue -o balbaros.iso isodir
+
+cd $SCRIPTROOT
