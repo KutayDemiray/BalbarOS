@@ -6,6 +6,7 @@
     * `abort()`
 * Partial stdio
     * `printf()`, `putchar()`, `puts()`
+        * `printf()`: Supports strings only, with `\n` and `\t` support 
 * Partial string
     * `memcmp()`, `memcpy()`, `memmove()`, `memset()`, `strlen()`
 * Stack smashing protector (basic)
@@ -14,4 +15,6 @@
 ## Future Features
 * Stack smashing protector
     * Add randomized smash guard
+* stdio
+    * `printf()` support for other types (regular chars, ints etc.)
 * Basically most of the commonly used parts of C

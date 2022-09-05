@@ -1,7 +1,7 @@
 #include <kernel/tty.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
+//#include <stdint.h>
 #include <string.h>
 
 #include "vga.h"
@@ -20,7 +20,7 @@ static uint16_t* terminal_buffer;
 void terminal_initialize(void) {
   terminal_row = 0;
   terminal_column = 0;
-  terminal_color = vga_entry_color(VGA_COLOR_LIGHT_GREY, VGA_COLOR_BLACK);
+  terminal_color = vga_entry_color(VGA_COLOR_WHITE, VGA_COLOR_MAGENTA);
   terminal_buffer = VGA_MEMORY;
   for (size_t y = 0; y < VGA_HEIGHT; y++) {
     for (size_t x = 0; x < VGA_WIDTH; x++) {
@@ -42,6 +42,9 @@ void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
 void terminal_putchar(char c) {
   unsigned char uc = c;
   if (c == '\n') {
+    while (terminal_column < VGA_WIDTH) {
+      terminal_putentryat(' ', terminal_color, terminal_column++, terminal_row);
+    }
     terminal_row++;
     terminal_column = 0;
 
@@ -55,6 +58,10 @@ void terminal_putchar(char c) {
         terminal_buffer[(VGA_HEIGHT - 1) * VGA_WIDTH + j] = ' ';
       }
       terminal_row = VGA_HEIGHT - 1;
+    }
+
+    for (int i = 0; i < VGA_WIDTH; i++) {
+      terminal_putentryat(' ', terminal_color, i, terminal_row);
     }
   } else if (c == '\t') {
     size_t tab_end = terminal_column + TAB_LENGTH < VGA_WIDTH ? terminal_column + TAB_LENGTH : VGA_WIDTH;
