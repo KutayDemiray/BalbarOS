@@ -25,7 +25,6 @@ ARCHDIR=arch/$(HOSTARCH)
 
 include $(ARCHDIR)/make.config
 
-# LIBCPATH=/home/kutay/Desktop/BalbarOS/balbaros/libc/
 LIBS:=$(LIBS)-lk -lgcc
 CFLAGS:=$(CFLAGS) $(ARCH_CFLAGS) $(LIBS)
 CPPFLAGS:=$(CPPFLAGS) $(ARCH_CPPFLAGS)
@@ -58,7 +57,7 @@ all: $(BINARIES)
 # TODO: Linking libc/libk/string.libk.o does not work unless string object file itself is manually added to libtest
 # There should be a better way to do this
 libtest.a: $(OBJS)
-	cp /home/kutay/Desktop/BalbarOS/balbaros/sysroot/usr/lib/libk.a libk.a
+	cp ../sysroot/usr/lib/libk.a libk.a
 	$(AR) x libk.a
 	$(AR) rcs $@ $(OBJS) *.o
 	rm libk.a
