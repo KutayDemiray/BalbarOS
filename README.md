@@ -1,11 +1,11 @@
-# Balbar Operating System
+# BalbarOS
 (yes I named my OS literally after myself)
 
 ## Goal
-Build a lightweight OS that can host servers (hopefully easily, probably not) 
+Learn stuff by building a lightweight OS that can do many things (hopefully easily, probably not) 
 
 ## Aimed Features
-* Bootloader -
+* Bootloader +?
 * Task management -
 * Task synchronization -
 * Memory management -
